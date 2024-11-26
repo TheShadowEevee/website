@@ -19,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
           <div
             class="flex lg:items-start gap-4 flex-col lg:flex-row items-center text-center lg:text-left"
           >
-            <img src="/avatar.webp" alt="Michael Malloy" class="w-16 h-16" />
+            <img src="/empty.png" alt="Michael Malloy" class="w-16 h-16" />
             <div>
               <a
                 href="/"
@@ -61,7 +61,7 @@ import Layout from "../layouts/Layout.astro";
                       aria-label={`${social.name} (opens in a new tab)`}
                     >
                       <span class="sr-only">{social.name}</span>
-                      {<Icon name={social.icon} />}
+                      {<Icon name={social.icon} size={"1.75em"}/>}
                     </a>
                   </li>
                 ))}

@@ -2,11 +2,9 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
-import playformCompress from "@playform/compress";
 import opengraphImages, { presets } from "astro-opengraph-images";
-
-// playformCompress() should be last (See https://github.com/PlayForm/Compress#readme)
 import icon from "astro-icon";
+import playformCompress from "@playform/compress"; // Should be last item in integrations
 
 // https://astro.build/config
 export default defineConfig({
