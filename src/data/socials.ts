@@ -1,27 +1,25 @@
-import IconDribbble from "../components/icons/dribbble.astro";
-import IconGithub from "../components/icons/github.astro";
-import IconLinkedin from "../components/icons/linkedin.astro";
-import IconTwitter from "../components/icons/twitter.astro";
+// "icon" is one of icons from https://icon-sets.iconify.design/
 
 export const SOCIALS = [
   {
     name: "Github",
-    url: "https://github.com/thevrus",
-    icon: IconGithub,
+    url: "https://github.com/TheShadowEevee",
+    icon: "simple-icons:github",
+  },
+
+  {
+    name: "Bluesky",
+    url: "https://bsky.app/profile/did:plc:krbzbucjaj76xjob6ju47ilo",
+    icon: "simple-icons:bluesky",
+  },
+  {
+    name: "Gitea",
+    url: "https://git.shad.moe/TheShadowEevee",
+    icon: "simple-icons:gitea",
   },
   {
     name: "Linkedin",
-    url: "https://www.linkedin.com/in/vrusin/",
-    icon: IconLinkedin,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/rusin_vadim",
-    icon: IconTwitter,
-  },
-  {
-    name: "Dribbble",
-    url: "https://dribbble.com/iamvr",
-    icon: IconDribbble,
+    url: "https://www.linkedin.com/in/mvmalloy/",
+    icon: "simple-icons:linkedin",
   },
 ];
