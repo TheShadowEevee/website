@@ -1,6 +1,10 @@
 ---
 import SparklesCore from "../components/SparklesCore.tsx";
 
+const defaultSidebarOpen = Astro.cookies.get('sidebar:state')?.value === 'true';
+
+import Page from "../app/website/page.tsx";
+
 interface Props {
   title: string;
 }
@@ -22,19 +26,21 @@ const { title } = Astro.props;
   <body
     class="bg-black leading-relaxed text-neutral-200 tracking-wide antialiased selection:bg-neutral-300 selection:text-neutral-900 z-10 relative"
   >
-    <SparklesCore
-      client:idle
-      id="tsparticlesfullpage"
-      background="transparent"
-      minSize={0.6}
-      maxSize={1.4}
-      opacity={0.2}
-      particleDensity={100}
-      className="w-full h-full fixed z-0"
-      particleColor="#FFFFFF"
-    />
-    <slot />
-    <script src="../scripts/main.ts"></script>
+    <Page client:load defaultSidebarOpen={defaultSidebarOpen}>
+      <SparklesCore
+        client:idle
+        id="tsparticlesfullpage"
+        background="transparent"
+        minSize={0.6}
+        maxSize={1.4}
+        opacity={0.2}
+        particleDensity={100}
+        className="w-full h-full fixed z-0"
+        particleColor="#FFFFFF"
+      />
+      <slot />
+      <script src="../scripts/main.ts"></script>
+    </Page>
   </body>
 
   <style is:global>

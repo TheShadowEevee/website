@@ -9,7 +9,15 @@ import playformCompress from "@playform/compress"; // Should be last item in int
 // https://astro.build/config
 export default defineConfig({
   site: "https://shad.moe",
-  integrations: [tailwind(), react(), opengraphImages({
+  trailingSlash: "ignore",
+  prefetch: {
+    prefetchAll: true
+  },
+  integrations: [tailwind({
+    applyBaseStyles: false,
+  }), react({
+    experimentalReactChildren: true,
+  }), opengraphImages({
     options: {
       //fonts: [{
       //  name: "Roboto",
@@ -24,6 +32,6 @@ export default defineConfig({
       "simple-icons": ["github", "bluesky", "gitea", "linkedin"],
     }
   }), playformCompress()],
-  output: "server",
+  output: "hybrid",
   adapter: vercel()
 });
