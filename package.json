@@ -36,6 +36,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.13",
     "prettier": "^3.3.1",
     "prettier-plugin-astro": "^0.14.0"
   }

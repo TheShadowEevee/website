@@ -21,7 +21,11 @@ export default defineConfig({
       //}]
     },
     render: presets.blackAndWhite
-  }), icon(), playformCompress()],
+  }), icon({
+    include: {
+      "simple-icons": ["github", "bluesky", "gitea", "linkedin"],
+    }
+  }), playformCompress()],
   output: "server",
   adapter: vercel()
 });
